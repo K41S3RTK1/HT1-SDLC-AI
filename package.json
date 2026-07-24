@@ -1,0 +1,40 @@
+{
+  "name": "shop502-cart-tui",
+  "version": "1.0.0",
+  "description": "POC de TUI para el manejo del carrito de usuarios anonimos de Shop 502",
+  "main": "index.js",
+  "bin": {
+    "shop502-cart": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "build": "pkg . --output dist/shop502-cart"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "pkg": "^5.8.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "pkg": {
+    "targets": [
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
